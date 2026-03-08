@@ -15,7 +15,7 @@ public class App {
         tienda.registrarCliente(new Cliente(IdGenerator.generarId(), "Felipe", "Felipe@mail.com"));
 
         tienda.registrarProducto(new Consola(IdGenerator.generarId(), "Z BOX", 239.99, true, 2, "MacroSoft"));
-        tienda.registrarProducto(new Videojuego(IdGenerator.generarId(), "God of peace",19.99, true, 3, "PolyStation 5"));
+        tienda.registrarProducto(new Videojuego(IdGenerator.generarId(), "God of peace",19.99, true, 3, "PolyStation 5", "Accion"));
 
         int op;
         do {
