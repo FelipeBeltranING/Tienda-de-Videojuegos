@@ -8,7 +8,7 @@ public class Consola extends Producto{
         this.marca=marca;
     }
 
-    String getMarca(){
+    public String getMarca(){
         return marca;
     }
 
