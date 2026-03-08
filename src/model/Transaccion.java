@@ -1,4 +1,6 @@
 package model;
+import service.CalculadoraPrecio;
+import service.IdGenerator;
 import java.time.LocalDate;
 
 public class Transaccion {
@@ -9,11 +11,12 @@ public class Transaccion {
     private final LocalDate fecha;
     private final DetalleTransaccion detalleTransaccion;
 
-    public Transaccion(int id, Cliente cliente, Producto producto, LocalDate fecha){
+
+    public Transaccion(Cliente cliente, Producto producto){
         this.id = IdGenerator.generarId();
         this.cliente = cliente;
         this.producto = producto;
-        this.fecha = fecha;
+        this.fecha = LocalDate.now();
         this.detalleTransaccion = new DetalleTransaccion(producto);
     }
 
@@ -22,4 +25,16 @@ public class Transaccion {
     public Producto getProducto(){return producto;}
     public LocalDate getFecha(){return fecha;}
     public DetalleTransaccion getDetalleTransaccion() {return detalleTransaccion;}
+
+    @Override                              // ← agregar desde aquí
+    public String toString() {
+        return "Transaccion{" +
+                "\n  ID: " + id +
+                "\n  Fecha: " + fecha +
+                "\n  Cliente: " + cliente.getNombre() +
+                "\n  Producto: " + producto.getTitulo() +
+                "\n  Subtotal: $" + detalleTransaccion.getSubtotal() +
+                "\n  Total: $" + detalleTransaccion.getTotal() +
+                "\n}";
+    }
 }
