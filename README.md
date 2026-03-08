@@ -31,24 +31,24 @@ java ui.Main
 2) Elija `3` para ver Lista de transacciones.
 **Resultado esperado:** No hay Transacciones para ser listadas.
 
-3) Elija `4` e ingrese:
-   - ID Usuario
-   - ID Producto
-**Resultado esperado:** “Préstamo creado…” y el material queda `Disponible=false`.
 
-### Prueba 3 — Intentar prestar un material ya prestado
-1) Repita la opción `3` con el mismo ID de material ya prestado.
-**Resultado esperado:** mensaje “El material NO está disponible (ya está prestado).”
+### Prueba 3 — Intentar vender un producto ya vendido
+Objetivo: verificar que el sistema impide vender un producto sin unidades disponibles.
+Pasos:
+1)	Elija nuevamente la opción 3 (Vender producto).
+	
+2)	Ingrese el mismo ID de cliente y el mismo ID de producto ya vendido (ej. ID 4).
+Resultado esperado: "El material NO esta disponible (ya esta prestado)."
 
-### Prueba 4 — Devolver un préstamo
-1) Elija `5` para ver el ID del préstamo activo.
-2) Elija `4` y escriba ese ID.
-**Resultado esperado:** “devuelto y cerrado” y el material vuelve a `Disponible=true`.
+### Prueba 4 — Devolver un producto
+Objetivo: verificar que al devolver una transacción el producto vuelve a estar disponible.
+Pasos:
+1)	Elija la opción 5 (Listar transacciones) para ver el ID de la transacción activa.
+Resultado esperado: Se lista la transacción creada en la prueba 2 con su ID correspondiente.
 
-### Prueba 5 — Validación por días máximos
-1) Elija `3` (prestar)
-2) Ingrese un número de días mayor a 15 (por ejemplo 20).
-**Resultado esperado:** “Días exceden el máximo permitido (15).”
+2)	Elija la opción 4 (Devolver producto) e ingrese el ID de la transacción listada.
+Resultado esperado: "Transaccion X devuelta y cerrada. Producto: God of peace | Disponible: true". El producto vuelve a Disponible: true.
+
 
 ---
 ## Evidencias por requisito 
