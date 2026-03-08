@@ -1,9 +1,8 @@
 package service;
-import model.Producto;
-import model.Transaccion;
-import model.Cliente;
+import model.*;
+
 import java.util.ArrayList;
-    public class TiendaVideojuego {
+    public class  TiendaVideojuego {
 
         private String nombre;
         private final ArrayList<Producto> productos;
@@ -111,10 +110,11 @@ import java.util.ArrayList;
 
             Transaccion t = new Transaccion(c, p);
             transacciones.add(t);
-            p.vender(); //metodo de interfase
+            p.vender(); //metodo de interfaz
 
             System.out.println("venta realizada -> " + p.getTitulo() + ", id -> " + p.getId());
-            System.out.println("Costo total de la compra: " + totalVenta);
+            System.out.println("Subtotal: " + t.getDetalleTransaccion().getSubtotal() + " IVA: " + Reglas.iva*100+"%");
+            System.out.println("Costo total de la compra: " + totalVenta +"$");
         }
 
     }

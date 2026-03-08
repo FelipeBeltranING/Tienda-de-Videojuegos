@@ -15,4 +15,13 @@ public class Cliente {
     public int getId(){return id;}
     public String getNombre(){return nombre;}
     public String getEmail(){return email;}
+
+    @Override                              // ← agregar desde aquí
+    public String toString() {
+        return "Cliente{" +
+                "\n  ID: " + id +
+                "\n  Nombre: " + nombre +
+                "\n  Email: " + email +
+                "\n}";
+    }
 }
