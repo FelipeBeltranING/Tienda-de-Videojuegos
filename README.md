@@ -24,15 +24,16 @@ java ui.Main
 1) En el menú, elija `1`.
 **Resultado esperado:** se listan Consola `ID: 3`, `Título: Z BOX`, `Precio: $239.99`, `Marca: MacroSoft`, `Unidades: 2`, `Disponible: true` y Videojuego `ID: 4`, `Título: God of peace`, `Precio: $19.99`, `Plataforma: PolyStation 5`,`Genero : Accion`, `Unidades: 3`, `Disponible: true`.
 
-### Prueba 2 — Prestar un material disponible
+### Prueba 2 — Listar clientes
 1) Elija `2` para ver Listado de clientes.
 **Resultado esperado:** se listan Cliente ` ID: 1`, `Nombre: Lucia`, `Email: Lucia@mail.com` y Cliente `ID: 2`, `Nombre: Felipe`, `Email: Felipe@mail.com`.
 
+### Prueba 3 - Listar Transacciones
 2) Elija `3` para ver Lista de transacciones.
 **Resultado esperado:** No hay Transacciones para ser listadas.
 
 
-### Prueba 3 — Intentar vender un producto ya vendido
+### Prueba 4 — Intentar vender un producto ya vendido
 Objetivo: verificar que el sistema impide vender un producto sin unidades disponibles.
 Pasos:
 1)	Elija nuevamente la opción 4 (Vender producto).
