@@ -1,5 +1,5 @@
 package model;
-import service.CalculadoraPrecio;
+//import service.CalculadoraPrecio;
 import service.IdGenerator;
 import java.time.LocalDate;
 
@@ -26,7 +26,7 @@ public class Transaccion {
     public LocalDate getFecha(){return fecha;}
     public DetalleTransaccion getDetalleTransaccion() {return detalleTransaccion;}
 
-    @Override                              // ← agregar desde aquí
+    @Override                           
     public String toString() {
         return "Transaccion{" +
                 "\n  ID: " + id +
