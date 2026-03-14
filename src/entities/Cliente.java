@@ -1,4 +1,4 @@
-package model;
+package entities;
 
 public class Cliente {
 
@@ -16,7 +16,7 @@ public class Cliente {
     public String getNombre(){return nombre;}
     public String getEmail(){return email;}
 
-    @Override                              // ← agregar desde aquí
+    @Override                           
     public String toString() {
         return "Cliente{" +
                 "\n  ID: " + id +

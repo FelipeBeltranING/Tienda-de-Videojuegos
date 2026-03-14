@@ -1,4 +1,4 @@
-package service;
+package usecases;
 
 public class IdGenerator {
     private static int contador = 0;

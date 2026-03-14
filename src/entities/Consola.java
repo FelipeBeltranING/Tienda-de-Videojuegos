@@ -1,4 +1,4 @@
-package model;
+package entities;
 
 public class Consola extends Producto{
     private final String marca;

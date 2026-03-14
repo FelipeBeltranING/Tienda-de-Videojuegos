@@ -1,5 +1,5 @@
-package service;
-import model.*;
+package usecases;
+import entities.*;
 
 import java.util.ArrayList;
     public class  TiendaVideojuego {
@@ -9,7 +9,6 @@ import java.util.ArrayList;
         private final ArrayList<Transaccion> transacciones;
         private final ArrayList<Cliente> clientes;
         private final CalculadoraPrecio calculadoraPrecio;
-//constructor
         public TiendaVideojuego(String nombre){
             this.nombre = nombre;
             this.productos = new ArrayList<>();
@@ -17,15 +16,13 @@ import java.util.ArrayList;
             this.clientes = new ArrayList<>();
             this.calculadoraPrecio = new CalculadoraPrecio();
         }
-//get unico en la clase
         public String getNombre(){return nombre;}
 
-//funciones de buscar para transacccion, cliente y productos:
-        public Producto buscarProducto(int idProducto){ //
+        public Producto buscarProducto(int idProducto){ 
             for(Producto p : productos){
                 if (p.getId() == idProducto) return p;
             }
-            return null; //cunado no se encuentra el producto buscado finaliza la funcion
+            return null; 
         }
         public Transaccion buscarTransaccion(int idTransaccion){
             for(Transaccion t : transacciones){

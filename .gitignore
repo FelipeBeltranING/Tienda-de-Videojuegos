@@ -1,3 +1,6 @@
+.vscode
+out
+.idea
 # Default ignored files
 /shelf/
 /workspace.xml
@@ -8,3 +11,11 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+# Carpetas de compilación de IntelliJ
+out/
+output/
+
+# Archivos de configuración del IDE (opcional pero recomendado)
+.idea/
+*.iml

@@ -1,4 +1,4 @@
-package model;
+package entities;
 
 public abstract class Producto implements Transaccionable {
     protected final int id;

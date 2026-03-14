@@ -1,8 +1,8 @@
-package ui;
+package adapters.console;
 
 import java.util.Scanner;
-import model.*;
-import service.*;
+import entities.*;
+import usecases.*;
 
 public class App {
     public static void main(String[] args) {
