@@ -2,6 +2,7 @@ package adapters.console;
 
 import java.util.Scanner;
 import entities.*;
+import infraestructure.services.IdGenerator;
 import usecases.*;
 
 

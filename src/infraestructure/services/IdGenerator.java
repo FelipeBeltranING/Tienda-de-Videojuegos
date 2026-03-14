@@ -1,4 +1,4 @@
-package usecases;
+package infraestructure.services;
 
 public class IdGenerator {
     private static int contador = 0;

@@ -107,7 +107,7 @@ Se invocan métodos sobrescritos: ``vender()`` y ``estaDisponible()``
 
 ### 7) Modificador static
 
-``usecases.IdGenerator.generarId() (static)``
+``infraestructure.services.IdGenerator.generarId() (static)``
 
 ``usecases.services.Reglas ``con public`` static`` double iva
 
