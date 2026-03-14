@@ -1,5 +1,5 @@
-package service;
-import model.*;
+package usecases;
+import entities.*;
 
 import java.util.ArrayList;
     public class  TiendaVideojuego {

@@ -1,7 +1,7 @@
-package model;
+package entities;
 
-import service.CalculadoraPrecio;
-import service.Reglas;
+import usecases.CalculadoraPrecio;
+import usecases.Reglas;
 
 public class DetalleTransaccion {
 

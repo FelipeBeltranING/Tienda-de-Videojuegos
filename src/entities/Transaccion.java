@@ -1,6 +1,7 @@
-package model;
-//import service.CalculadoraPrecio;
-import service.IdGenerator;
+
+
+package entities;
+import usecases.IdGenerator;
 import java.time.LocalDate;
 
 public class Transaccion {

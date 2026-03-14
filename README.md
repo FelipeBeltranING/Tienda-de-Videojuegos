@@ -8,8 +8,8 @@ Biblioteca/
    docs/
       UML.png
    src/
-      model/
-      service/
+      entities/
+      usecases/
       ui/
 ```
 ## compilacion y ejecución  
@@ -61,22 +61,22 @@ El resultado deberia permanecer igual ya que el producto no fue posible venderlo
 
 ## Evidencias por requisito 
 ### 1) Relaciones entre las clases 
-#### Uso (dependency): ``service.TiendaVideojuegos`` usa ``service.CalculadoraPrecio``
+#### Uso (dependency): ``usecases.TiendaVideojuegos`` usa ``usecases.CalculadoraPrecio``
 
 - ``private final CalculadoraPrecio calculadoraPrecio;``
 - ``calculadoraPrecio.calcularPrecioVenta(...)``
 
-#### Asociación:`` model.Transaccion`` se asocia a`` model.Cliente y model.Producto``
+#### Asociación:`` entities.Transaccion`` se asocia a`` entities.Cliente y entities.Producto``
 
 private final Cliente cliente;
 
 private final Producto producto;
 
-#### Agregación: ``service.TiendaVideojuegos`` agrega listas (ArrayList) de Producto, Transaccion, Cliente
+#### Agregación: ``usecases.TiendaVideojuegos`` agrega listas (ArrayList) de Producto, Transaccion, Cliente
 
 private final ArrayList<Producto> productos = new ArrayList<>(); etc.
 
-#### Composición: ``model.Transaccion`` compone`` DetalleTransaccion``
+#### Composición: ``entities.Transaccion`` compone`` DetalleTransaccion``
 
 private final ``DetalleTransaccion detalleTransaccion``;
 
@@ -107,9 +107,9 @@ Se invocan métodos sobrescritos: ``vender()`` y ``estaDisponible()``
 
 ### 7) Modificador static
 
-``service.IdGenerator.generarId() (static)``
+``usecases.IdGenerator.generarId() (static)``
 
-``service.Reglas ``con public`` static`` double iva
+``usecases.Reglas ``con public`` static`` double iva
 
 ## Diagram UML
 El diagrama UML correspondiente al código está en:
