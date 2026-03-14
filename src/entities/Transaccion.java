@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream:src/model/Transaccion.java
-package model;
-import service.CalculadoraPrecio;
-import service.IdGenerator;
-=======
 package entities;
->>>>>>> Stashed changes:src/entities/Transaccion.java
+
 import java.time.LocalDate;
 
 public class Transaccion {

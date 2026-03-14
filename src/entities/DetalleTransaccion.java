@@ -1,11 +1,5 @@
 package model;
 
-<<<<<<< Updated upstream:src/model/DetalleTransaccion.java
-import service.CalculadoraPrecio;
-import service.Reglas;
-
-=======
->>>>>>> Stashed changes:src/entities/DetalleTransaccion.java
 public class DetalleTransaccion {
 
     private final double subtotal;
