@@ -105,16 +105,14 @@ import java.util.ArrayList;
                 System.out.println("Producto no disponible");
                 return;
             }
-            double precioUnitario = p.getPrecioBase();
-            double totalVenta = calculadoraPrecio.calcularPrecioVenta(precioUnitario, Reglas.iva);
 
-            Transaccion t = new Transaccion(c, p);
+            Transaccion t = new Transaccion(IdGenerator.generarId(),c, p, new DetalleTransaccion(calculadoraPrecio.calcularPrecioVenta(p.getPrecioBase(),Reglas.iva),p.getPrecioBase()));
             transacciones.add(t);
             p.vender(); //metodo de interfaz
 
             System.out.println("venta realizada -> " + p.getTitulo() + ", id -> " + p.getId());
             System.out.println("Subtotal: " + t.getDetalleTransaccion().getSubtotal() + " IVA: " + Reglas.iva*100+"%");
-            System.out.println("Costo total de la compra: " + totalVenta +"$");
+            System.out.println("Costo total de la compra: " + t.getDetalleTransaccion().getTotal() +"$");
         }
 
     }

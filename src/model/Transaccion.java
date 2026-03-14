@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream:src/model/Transaccion.java
 package model;
 import service.CalculadoraPrecio;
 import service.IdGenerator;
+=======
+package entities;
+>>>>>>> Stashed changes:src/entities/Transaccion.java
 import java.time.LocalDate;
 
 public class Transaccion {
@@ -12,12 +16,12 @@ public class Transaccion {
     private final DetalleTransaccion detalleTransaccion;
 
 
-    public Transaccion(Cliente cliente, Producto producto){
-        this.id = IdGenerator.generarId();
+    public Transaccion(int id,Cliente cliente, Producto producto, DetalleTransaccion detalleTransaccion){
+        this.id = id;
         this.cliente = cliente;
         this.producto = producto;
         this.fecha = LocalDate.now();
-        this.detalleTransaccion = new DetalleTransaccion(producto);
+        this.detalleTransaccion = detalleTransaccion;
     }
 
     public int getId(){return id;}

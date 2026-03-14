@@ -1,18 +1,19 @@
 package model;
 
+<<<<<<< Updated upstream:src/model/DetalleTransaccion.java
 import service.CalculadoraPrecio;
 import service.Reglas;
 
+=======
+>>>>>>> Stashed changes:src/entities/DetalleTransaccion.java
 public class DetalleTransaccion {
 
-    private final Producto producto;
     private final double subtotal;
     private final double total;
 
-    public DetalleTransaccion(Producto producto){
-        this.producto = producto;
-        this.subtotal = producto.getPrecioBase();
-        this.total = new CalculadoraPrecio().calcularPrecioVenta(producto.getPrecioBase(),Reglas.iva);
+    public DetalleTransaccion(double total, double subtotal){
+        this.subtotal = subtotal;
+        this.total = total;
     }
 
     public double getSubtotal() {return subtotal;}
