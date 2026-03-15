@@ -1,4 +1,4 @@
-package infraestructure.services;
+package infrastructure.services;
 import usecases.ports.IdGeneratorRepository;
 
 public class IdGenerator implements IdGeneratorRepository {
