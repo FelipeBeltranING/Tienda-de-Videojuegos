@@ -4,9 +4,7 @@ import java.util.List;
 import entities.Cliente;
 
 public interface ClienteRepository {
-    public interface ProductoRepository {
-    void save(Cliente transaccion);
+    void save(Cliente cliente);
     Cliente findById(int id);
     List<Cliente> findAll();
-}
 }
