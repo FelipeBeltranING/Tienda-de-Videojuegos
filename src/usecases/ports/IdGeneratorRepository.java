@@ -1,5 +1,5 @@
 package usecases.ports;
 
-public interface IdGenerator {
-
+public interface IdGeneratorRepository {
+    String nextId(char typeId);
 }
