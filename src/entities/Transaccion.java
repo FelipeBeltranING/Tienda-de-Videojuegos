@@ -4,14 +4,14 @@ import java.time.LocalDate;
 
 public class Transaccion {
 
-    private final int id;
+    private final String id;
     private final Cliente cliente;
     private final Producto producto;
     private final LocalDate fecha;
     private final DetalleTransaccion detalleTransaccion;
 
 
-    public Transaccion(int id,Cliente cliente, Producto producto, DetalleTransaccion detalleTransaccion){
+    public Transaccion(String id,Cliente cliente, Producto producto, DetalleTransaccion detalleTransaccion){
         this.id = id;
         this.cliente = cliente;
         this.producto = producto;
@@ -19,7 +19,7 @@ public class Transaccion {
         this.detalleTransaccion = detalleTransaccion;
     }
 
-    public int getId(){return id;}
+    public String getId(){return id;}
     public Cliente getCliente(){return cliente;}
     public Producto getProducto(){return producto;}
     public LocalDate getFecha(){return fecha;}

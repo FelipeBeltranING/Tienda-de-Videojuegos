@@ -19,6 +19,9 @@ import java.util.ArrayList;
         }
         public String getNombre(){return nombre;}
 
+
+        public void registrarUsuario(String nombre, String email) { registrarUsuarioUseCase.ejecutar(nombre,email); }
+
         public Producto buscarProducto(int idProducto){ 
             for(Producto p : productos){
                 if (p.getId() == idProducto) return p;

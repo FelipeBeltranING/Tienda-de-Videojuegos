@@ -1,13 +1,13 @@
 package entities;
 
 public abstract class Producto implements Transaccionable {
-    protected final int id;
+    protected final String id;
     protected final String titulo;
     protected final double precioBase;
     protected boolean disponible=true;
     protected int unidades;
     
-    public Producto(int id, String titulo, double precioBase, boolean disponible, int unidades) {
+    public Producto(String id, String titulo, double precioBase, boolean disponible, int unidades) {
         this.id = id;
         this.titulo = titulo;
         this.precioBase = precioBase;
@@ -15,7 +15,7 @@ public abstract class Producto implements Transaccionable {
         this.disponible = disponible;
     }
     
-    public int getId() {
+    public String getId() {
         return id;
     }
     

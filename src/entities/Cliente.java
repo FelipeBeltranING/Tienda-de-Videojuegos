@@ -2,17 +2,17 @@ package entities;
 
 public class Cliente {
 
-    private final int id;
+    private final String id;
     private final String nombre;
     private final String email;
 
-    public Cliente(int id, String nombre, String email){
+    public Cliente(String id, String nombre, String email){
         this.id = id;
         this.nombre = nombre;
         this.email = email;
     }
 
-    public int getId(){return id;}
+    public String getId(){return id;}
     public String getNombre(){return nombre;}
     public String getEmail(){return email;}
 

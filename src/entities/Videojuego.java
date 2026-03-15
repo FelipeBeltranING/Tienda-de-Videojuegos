@@ -4,7 +4,7 @@ public class Videojuego extends Producto{
     private final String plataforma;
     private final String genero;
 
-     public Videojuego(int id, String titulo, double precioBase, boolean disponible, int unidades,String plataforma, String genero) {
+     public Videojuego(String id, String titulo, double precioBase, boolean disponible, int unidades,String plataforma, String genero) {
         super(id, titulo, precioBase, disponible, unidades);
         this.plataforma = plataforma;
         this.genero = genero;

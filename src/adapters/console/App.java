@@ -3,6 +3,9 @@ package adapters.console;
 import java.util.Scanner;
 import entities.*;
 import infrastructure.services.IdGenerator;
+import usecases.ports.IdGeneratorRepository;
+import usecases.services.RegistrarClienteUseCase;
+import usecases.services.TiendaVideojuego;
 
 
 public class App {
@@ -11,12 +14,14 @@ public class App {
 
         TiendaVideojuego tienda = new TiendaVideojuego("GameStore");
 
+        IdGeneratorRepository idGeneratorRepository = new IdGenerator();
         // Datos de prueba
-        tienda.registrarCliente(new Cliente(IdGenerator.generarId(), "Lucia", "Lucia@mail.com"));
-        tienda.registrarCliente(new Cliente(IdGenerator.generarId(), "Felipe", "Felipe@mail.com"));
 
-        tienda.registrarProducto(new Consola(IdGenerator.generarId(), "Z BOX", 239.99, true, 2, "MacroSoft"));
-        tienda.registrarProducto(new Videojuego(IdGenerator.generarId(), "God of peace",19.99, true, 3, "PolyStation 5", "Accion"));
+        TiendaVideojuego.(new Cliente(idGeneratorRepository.nextId('U'), "Lucia", "Lucia@mail.com"));
+        tienda.registrarCliente(new Cliente(idGeneratorRepository.nextId('U'), "Felipe", "Felipe@mail.com"));
+        RegistrarClienteUseCase.
+        tienda.registrarProducto(new Consola(idGeneratorRepository.nextId('C'), "Z BOX", 239.99, true, 2, "MacroSoft"));
+        tienda.registrarProducto(new Videojuego(idGeneratorRepository.nextId('V'), "God of peace",19.99, true, 3, "PolyStation 5", "Accion"));
 
         int op;
         do {

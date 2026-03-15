@@ -3,7 +3,7 @@ package entities;
 public class Consola extends Producto{
     private final String marca;
 
-    public Consola(int id, String titulo, double precioBase, boolean disponible, int unidades, String marca){
+    public Consola(String id, String titulo, double precioBase, boolean disponible, int unidades, String marca){
         super(id, titulo, precioBase, disponible, unidades);
         this.marca=marca;
     }
