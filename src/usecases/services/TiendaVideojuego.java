@@ -38,18 +38,8 @@ import java.util.ArrayList;
             }
             return null;
         }
-//funciones de registrar para productos, transacciones y clientes:
 
 
-        public void registrarTransaccion(Transaccion t){
-            if (t == null) return;
-            transacciones.add(t);
-        }
-
-        public void registrarCliente(Cliente c){
-            if (c == null) return;
-            clientes.add(c);
-        }
 //funciones de listar para productos, transacciones y clientes
         public void listarProductos(){
             if(productos.isEmpty()){
